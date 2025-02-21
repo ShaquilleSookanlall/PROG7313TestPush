@@ -14,10 +14,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="128dp"
         android:ems="10"
-        android:inputType="text"
-        android:text="Name"
+        android:inputType="number"
+        android:hint="Enter first number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,8 +26,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:inputType="text"
-        android:text="Name"
+        android:inputType="number"
+        android:hint="Enter second number"
+        app:layout_constraintStart_toStartOf="@+id/etValOne"
+        app:layout_constraintTop_toBottomOf="@+id/etValOne" />
+
+    <EditText
+        android:id="@+id/etResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:ems="10"
+        android:hint="Result"
+        android:inputType="number"
         app:layout_constraintStart_toStartOf="@+id/etValOne"
         app:layout_constraintTop_toBottomOf="@+id/etValOne" />
 
@@ -36,20 +46,39 @@
         android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="8dp"
+        android:text="+"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnSubtract"
+        app:layout_constraintEnd_toStartOf="@+id/btnSubtract"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/tvResult"
+    <Button
+        android:id="@+id/btnDivide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="21dp"
-        android:text="Answer"
-        app:layout_constraintEnd_toEndOf="@+id/btnAdd"
-        app:layout_constraintTop_toBottomOf="@+id/btnAdd" />
+        android:layout_marginEnd="11dp"
+        android:text="/"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnMultiply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnMultiply" />
+
+    <Button
+        android:id="@+id/btnMultiply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        app:layout_constraintEnd_toStartOf="@+id/btnDivide"
+        app:layout_constraintStart_toEndOf="@+id/btnSubtract"
+        app:layout_constraintTop_toTopOf="@+id/btnSubtract" />
+
+    <Button
+        android:id="@+id/btnSubtract"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnMultiply"
+        app:layout_constraintStart_toEndOf="@+id/btnAdd"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
