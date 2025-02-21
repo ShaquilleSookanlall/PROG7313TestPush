@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         btnOne = findViewById(R.id.btnAdd)
         etValOne = findViewById(R.id.etValOne)
         etValTwo = findViewById(R.id.etValTwo)
-        tvResult = findViewById(R.id.tvResult)
+        tvResult = findViewById(R.id.etResult)
 
     }
 }
